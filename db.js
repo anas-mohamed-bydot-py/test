@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 export const db = async () => {
     return await mongoose.connect(process.env.uri).
         then(() => {
-            console.log("DB Done");
+            console.log("DB Done => ", process.env.uri);
 
         })
         .catch((err) => {
